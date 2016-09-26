@@ -1,1 +1,1 @@
-web: messagebox
+web: MessageBox

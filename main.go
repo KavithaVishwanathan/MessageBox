@@ -65,6 +65,9 @@ func labelByMessageId(rw http.ResponseWriter, request *http.Request) {
 
 func handleRequests() {
 	port := os.Getenv("PORT")
+	if port == "" {
+		log.Fatal("$PORT must be set")
+	}
 	router := mux.NewRouter().StrictSlash(true)
     
     router.HandleFunc("/user", users)
