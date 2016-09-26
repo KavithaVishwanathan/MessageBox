@@ -44,7 +44,7 @@ function details(id){
 				dataType: 'json'
 				});
 	    	var text = '<h2>';
-	    	$.when(userFrom, userTo, labels).then(function (a,b,c) {
+	    	$.when(userFrom, userTo, labels).done(function (a,b,c) {
 	    		console.log(a, b, c);
 	    		text += data.subject + '</h2>';
 		    	text += '<p>' + data.body + '</p>';
