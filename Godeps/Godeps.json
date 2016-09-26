@@ -1,0 +1,33 @@
+{
+	"ImportPath": "github.com/KavithaVishwanathan/MessageBox",
+	"GoVersion": "go1.6",
+	"GodepVersion": "v74",
+	"Packages": [
+		"./..."
+	],
+	"Deps": [
+		{
+			"ImportPath": "github.com/KavithaVishwanathan/messagebox/db",
+			"Rev": "fbb5851ca461ccb5586d19bfc2655d05cdd65ebe"
+		},
+		{
+			"ImportPath": "github.com/KavithaVishwanathan/messagebox/model",
+			"Rev": "fbb5851ca461ccb5586d19bfc2655d05cdd65ebe"
+		},
+		{
+			"ImportPath": "github.com/gorilla/context",
+			"Comment": "v1.1-7-g08b5f42",
+			"Rev": "08b5f424b9271eedf6f9f0ce86cb9396ed337a42"
+		},
+		{
+			"ImportPath": "github.com/gorilla/mux",
+			"Comment": "v1.1-27-g757bef9",
+			"Rev": "757bef944d0f21880861c2dd9c871ca543023cba"
+		},
+		{
+			"ImportPath": "github.com/mattn/go-sqlite3",
+			"Comment": "v1.1.0-92-g3fb7a0e",
+			"Rev": "3fb7a0e792edd47bf0cf1e919dfc14e2be412e15"
+		}
+	]
+}
