@@ -11,7 +11,7 @@ $(document).ready(function() {
             rows += "<td>" + this.id + "</td>";
             rows += "<td>" + this.subject + "</td>";
             rows += "<td>" + this.body + "</td>";
-            rows += "<td onClick='details(" + this.id + ")' style='color:blue;text-decoration: underline;'>More Details</td>";
+            rows += "<td onClick='details(" + this.id + ")' style='color:blue;text-decoration: underline;cursor:pointer;'>More Details</td>";
             rows += "</tr>";
         });
         $('.message-table').append(rows);
