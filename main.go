@@ -81,7 +81,7 @@ func handleRequests() {
     //Render the html
     router.PathPrefix("/").Handler(http.FileServer(http.Dir("./frontend/")))
     http.Handle("/", router)
-    log.Fatal(http.ListenAndServe(":8080", nil))
+    log.Fatal(http.ListenAndServe(":"+port, nil))
 }
 
 func main() {
