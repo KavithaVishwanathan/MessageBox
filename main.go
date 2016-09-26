@@ -3,6 +3,7 @@ package main
 import (
 	"log"
     "net/http"
+    "os"
     _ "fmt"
     "encoding/json"
     "database/sql"
@@ -63,6 +64,7 @@ func labelByMessageId(rw http.ResponseWriter, request *http.Request) {
 }
 
 func handleRequests() {
+	port := os.Getenv("PORT")
 	router := mux.NewRouter().StrictSlash(true)
     
     router.HandleFunc("/user", users)
@@ -76,7 +78,7 @@ func handleRequests() {
     //Render the html
     router.PathPrefix("/").Handler(http.FileServer(http.Dir("./static/")))
     http.Handle("/", router)
-    log.Fatal(http.ListenAndServe(":8081", nil))
+    log.Fatal(http.ListenAndServe(":"+port, nil))
 }
 
 func main() {
