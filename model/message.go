@@ -13,8 +13,3 @@ type Message struct {
 	ToUser	int	`json:"touser"`
 }
 
-type LabelMessageMapper struct {
-	LabelId	int	`json:"labelid"`
-	MessageId	int	`json:"messageid"`
-}
-

@@ -79,9 +79,9 @@ func handleRequests() {
     router.HandleFunc("/label/{id}", labelById)
 
     //Render the html
-    router.PathPrefix("/").Handler(http.FileServer(http.Dir("./static/")))
+    router.PathPrefix("/").Handler(http.FileServer(http.Dir("./frontend/")))
     http.Handle("/", router)
-    log.Fatal(http.ListenAndServe(":"+port, nil))
+    log.Fatal(http.ListenAndServe(":8080", nil))
 }
 
 func main() {
